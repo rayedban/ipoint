@@ -43,9 +43,9 @@
 <!-- AdminLTE -->
 <script src="../dist/js/adminlte.js"></script>
 <script>
-
-    const ws = new WebSocket("ws://localhost:8082");
-
+   var host = location.origin.replace(/^http/, 'ws')
+   const ws = new WebSocket(host);
+  //const ws = new WebSocket("ws://localhost:8082");
     ws.addEventListener("open", () =>{
         console.log("We are connected!");
 
